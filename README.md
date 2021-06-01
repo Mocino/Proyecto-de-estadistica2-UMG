@@ -10,7 +10,7 @@ library(tidyverse)
 
 Facebook <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/pseudo_facebook.csv")
 Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.1
 
 #El genero puede ser un factor que altere de manera drastica las oportundades de los 
@@ -50,6 +50,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #diferencia de los hombres asi que hay mas datos atipicos en mujeres que en hombres a pesar de tener una media que rosa lo
 #similar
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.2
 
 #En Facebok el genero es un factor que puede alterar los likes que da un usuario
@@ -80,7 +81,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #son mas reservadas con los gustos que comparte que genere menos likes que puede dar, a diferencia de el analisis anterior
 #los que no definin su genero no realizan muchos likes que es a causa de mantener su privasidad con respecto a quien es 
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No. 3
 
 #El genero afecta en la en la cantidad de amigos que conoce esto quiere decir que no son amistades que facebook le recomendo
@@ -106,7 +107,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #en donde tiene menos amistades en donde siempre es una constante que quiere tener su privacidad apartada de las 
 #redes sociales compartiendo menos informacion con personas o amistades que puede tener
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.4
 
 
@@ -132,6 +133,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #queren tener privacidad y no compartin sus datos que causa que coloquen edades mayores o que no corresonden y colocan
 #mas altas para desapersivir a atacantes 
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.5
 
 #La edad puede ser un factor que tiene relacion on el conteo de amigos que se tiene en la red
@@ -160,7 +162,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #de trabajo o problemas que se nota un pico entre los 70 y otro gran pico en los mayores de 100 a?os en donde se son influidos a 
 #las redes sociales y familiares queridos o amigos tiende a amistarse en dicha red social
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.6
 
 #el conteo de amigos total tiene alguna correlacion con los likes que da 
@@ -185,7 +187,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #en donde se da mucho en unas ocaiones pero a muchos amigos menos usuarios dan likes y si lo dan no sobrepasa de
 #gran manera
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.7
 
 #Los likes que da tiene alguna correlacion con los amigos que inicio en facebook esto quiere decir que son amigos que conocio
@@ -209,8 +211,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #constante de likes es menos esto es causa de que se inician amigos pero no se tiene mucha confianza para publicar o 
 #dar opiniones de los posteos de los amigos
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.8
-
 #Tiene alguna correlacion el conteo de amigos total con los amigos iniciados
 
 #H0 = Si tiene conrrelacion entre los datos 
@@ -233,8 +235,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #esto da a entender que el que tiene mas amigos esta mas abierto a inicar mas amigos nuevos en redes sociales a los que son 
 #cerrados que tambien tienden a ser menos abiertos a conocer nuevos amigos 
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.9
-
 #El Genero es un factor que afecta con los amigos que inicia en la plataforma de facebook
 
 #H0: El genero no afecta (Genero = Amigos Iniciados)
@@ -256,9 +258,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #que sigue siendo una constante en todo el dataset, en donde los que no tiene su Genero definido comparten menos informacion
 #obre ellos para mantener su privacidad apartada de las redes sociales
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.10
-
 #Los likes desde internet tienen una correlacion con el conteo de amigos 
 
 #H0 = Si tiene conrrelacion entre los datos 
@@ -278,9 +279,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #de que plataforma (mobile o PC) se este siempre tendra diferenties amigos totales ya que no afectaria por cuestiones de acceisbilidad
 
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.11
-
 #El genero afecta en los likes recibidos 
 
     #Grafico (ggplot)
@@ -303,9 +303,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #likes por y las mujeres tieden a compartir ese tipo de informacion ya que tiene un mayor valor a la privacidad y tambien es un dato
 #importante en el sexismo o violencia en internet en donde las mujeres reciven mas atencion ya sea deceada o no
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.12
-
 #El genero afecta si tiene mas likes hechos desde la aplicacion mobile de facebook
 
 #H0: El genero no afecta (Genero = Likes desde Mobile)
@@ -326,9 +325,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #En la grafica se nota que los hombres tiene un mayor pico de likes desde el telefono pero tiene menos constancia
 #en las mujeres tiene menos pico de likes mobiles pero una mayor constancia 
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.13
-
 #El genero afecta si tiene mas likes hechos desde la pagina web de facebook
 
 #H0: El genero no afecta (Genero = likes desde la pagina web)
@@ -353,9 +351,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #mas la privacidad por eso utilizan paginas web. Aunque en los ultimos estudios se nota que hay un crecimiento de uso
 #de telefonos en mujeres esto puede ocacionar un aumento en este tipo de dato que afectaria en un dataset mas actualizado
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.14
-
 #¿Cual es la edad con mas promedio que usa la red social Facebook?
 
     #Shapiro
@@ -370,9 +367,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #a este rango de edades a la accesibilidad que tiene en esta edad en donde son adolecentes y quiren conocer 
 #personas que compartan sus gustos para poder compartir o sentirse adentro de una comunidad
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.15
-
 #¿habra dependencia entre grado segun la region?
 
 #h0 = Las variables son Independientes, El grado no depende de la region
@@ -403,8 +399,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #(Maria Marinho, VeronicaQuiroz, pág. 20).
 #Estratificación social: una propuesta metodológica multidimensional para la subregión norte de América Latina y el Caribe (cepal.org)
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.16
-
 #¿Las variables son independientes entre condicion de pretamos y categoria de ingresos?
 
 #h0 = Las variables son independientes, la condicion de prestamo no depende de la categoria de ingreso
@@ -428,15 +424,17 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #---analisis---#
 
-#Considero que, si hay dependencia entre el ingreso y la condición de préstamo, pongamos como ejemplo el préstamo de un local:
-#*una persona con Ingresos bajos, tiene más necesidad de pedir un préstamo para poder poner un local
+#Hay dependencia entre el ingreso y la condición de préstamo, pongamos como ejemplo el préstamo de un local:
+# *una persona con Ingresos bajos, tiene más necesidad de pedir un préstamo para poder poner un local
 #*una persona con Ingresos Medios, puede tener o no tener la necesidad de pedir un préstamo
 #*una persona con Ingresos Altos, tiene poca necesidad de adquirir un préstamo
-#Mientras tanto en la condición de préstamo indica que hay mayor aceptación a  un buen prestamo que un mal préstamo
+#Mientras tanto en la condición de préstamo indica que hay mayor aceptación a un buen préstamo que un mal préstamo
+#“No todas las personas que solicitan un crédito lo consiguen ni obtienen los mismos términos y condiciones: existen algunos factores que son tomados en consideración por los prestadores para determinar su solvencia, como por ejemplo, el nivel de ingresos, gastos, deudas y antecedentes de crédito.”
 
+#Fuente: https://www.consumidor.ftc.gov/articulos/s0347-sus-derechos-de-igualdad-de-oportunidad-de-credito
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.17
-
 #¿3. los datos de taza de interes y pagos de interés estan en normalidad?
 
 #los datos si presentan normalidad
@@ -458,8 +456,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #los datos no presentan normalidad segun la grafica
 #se rechaza la hipotesis nula
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.18
-
 #¿los datos de monto del préstamo por Plazo presentan normalidad?
 
 #los datos si presentan normalidad
@@ -480,8 +478,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #los datos presentan normalidad segun la grafica
 #no se rechaza la hipotesis nula
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.19
-
 #¿tiene dependencia el interes con los años que pasen
 
 #h0=Las dos variable son independientes, el interes no tiene dependencia con los años que pasen
@@ -505,12 +503,13 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #---analisis---#
 
-#Considero que hay dependencia entre el interés y los años que pasen, aunque no está claro del porqué, 
-#pero considero que de que es por la popularidad que cada año tiene, considero que, para abastecer a mas personas, 
-#la taza de interés crecerá con los años
+#-Las 2 variables no son independientes, el interés tiene dependencia con los años que pasen
+#Considero que hay dependencia entre el interés y los años que pasen, considero que es por la popularidad y la demanda que cada año tiene un banco
+#“Una de las principales razones de cambios en las tasas de interés es por la demanda y oferta de crédito en el mercado.”
+#Fuente: https://www.afipopular.com.do/app/do/consejo_experto.aspx?id=10545
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.20
-
 #¿ hay independencia en el monto del prestamo con los años que pasen
 
 #h0=las variables son independientes, el monto del prestamo no depende  con los años
@@ -532,11 +531,10 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 # no Se rechaza la hipotesis nula
 
 #---analisis---#
-#No creo que haya relación el monto de préstamo con los años, considero mas que es un factor externo, como la sociedad y la economía del país
+#No, no hay relación del monto de préstamo con los años, considero mas que es un factor externo, como con el ente o sociedad que se asoció o la economía del país
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.21
-
 #¿hay similitud en el monto de prestamo segun la propiedad de vivienda?
 
 #Ho: no hay diferencias en el monto de prestamo por la propiedad de vivienda 
@@ -560,14 +558,11 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #---analisis---#
 
-#Considero que, si hay diferencias dependiendo la propiedad de vivienda, ya que alguien 
-#con casa propia al querer remodelar su casa, tiende pedir una cantidad mayor en el monto 
-#de préstamo a diferencia de alguien solo renta (ya que no puede remodelar el lugar donde 
-#reside, la razón del préstamo es más para subsistir), o como alguien que tiene una hipoteca 
-#tiene que pagar una cantidad mayor al que tiene vivienda propia.
+#Pueden existir diferencias en el monto de préstamo dependiendo las necesidades
+#personales de la persona según la propiedad de vivienda que tenga
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.22
-
 #¿hay igual en la taza de intereses no dependiendo el grado?
 
 #Ho: no hay diferencias en la taza de intereses por el grado
@@ -591,12 +586,12 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #---analisis---#
 
-#Es lógico pensar que alguien que esta asociado con un banco o tiene usuario premium, 
-#tendrá ventajas, en este caso la taza de intereses para los usuarios A es menor a 10%, 
-#a diferencia del los usuarios G que no bajan de 20%
+#Si hay diferencias, porque el nivel o jerarquía que alguien tenga, puede generarle 
+#más beneficios, en este caso la taza de intereses para los usuarios A es menor a 10%,
+#a diferencia de los usuarios G que no bajan de 20%
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.23
-
 #¿hay diferencia en el monto del prestamo por el tipo de aplicacion
 #  H0= No, no hay difenencia en el monto del prestamo por el tipo de aplicacion 
 #  H1= si, si hay diferencias en el monto del prestamo por el tipo de aplicacion
@@ -621,9 +616,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #Es posible que cuando se una solicitud conjunta al momento de un
 #préstamo, como está asociada se debe decir mayor monto para poder repartirse en partes moderadas para cada sujeto.
 
-
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.24
-
 #¿hay diferencia en la condicion de prestamo con el monto de prestamo 
 #  H0= No, no hay difenencia en la condicion de prestamo por el monto del tiempo 
 #  H1= si, si hay difenencia en la condicion de prestamo por el monto del tiempo
@@ -647,9 +641,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #Hay diferencia ya que al momento de condicionar un préstamo se deberá de ver si a cumple,
 #en este caso, se puede ver que hay menos aceptación de préstamo
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.25
-
-
 #¿ay diferencia en pagos de interes por la tasa de interes 
 #  H0= No, no hay diferencia en pagos de interes por la tasa de interes 
 #  H1= si, si hay diferencia en pagos de interes por la tasa de interes
@@ -675,6 +668,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #Al parecer el pago de intereses por lo regularmente es alto, puede deberse a 
 #que hay mucho dinero circulando en ese banco
 
+#--------------------------------------------------------------------------------------------------------------------------------#
 # No.26
 #Grafica de tiempo de serie sobre la tasa de interes mediante los años que pasan
 
