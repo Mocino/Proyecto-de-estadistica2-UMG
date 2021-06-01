@@ -14,19 +14,19 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 # No.1
 
 #El genero puede ser un factor que altere de manera drastica las oportundades de los 
-#usuarios a ser tenderncia en Facebook
+#usuarios a ser tenderncia en Facebook.
 
 #H0: El genero no afecta (Genero = Tendencia)
 #H1: El genero si afecta (Genero =/= Tendencia)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=tenure, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Anova)
-anova<- aov(Facebook$tenure~Facebook$gender)
-summary(anova)
-
-#P-value = 2e-16
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=tenure, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Anova)
+    anova<- aov(Facebook$tenure~Facebook$gender)
+    summary(anova)
+    
+    #P-value = 2e-16
 
 #el P-value es mucho menor a 0.05 esto quiere decir que se rechaza la hipotesis nula esto quiere decir
 #que segun el genero afecta las posibilidades de ser tendencia
@@ -58,14 +58,14 @@ summary(anova)
 #H1: El genero si afecta (Genero =/= likes)
 
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=likes, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Anova)
-anova<- aov(Facebook$likes~Facebook$gender)
-summary(anova)
-
-#P-value = 2e-16
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=likes, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Anova)
+    anova<- aov(Facebook$likes~Facebook$gender)
+    summary(anova)
+    
+    #P-value = 2e-16
 
 #Al se el P-value mucho menor a 0.05 quiere decir que se rechaza la hipotesis nula que significa que el 
 #genero afecta en los likes que realiza un usuario 
@@ -89,12 +89,12 @@ summary(anova)
 #H0: El genero no afecta (Genero = conteo de amistades)
 #H1: El genero si afecta (Genero =/= conteo de amistades)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=friend_count, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Anova)
-anova<- aov(Facebook$friend_count~Facebook$gender)
-summary(anova)
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=friend_count, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Anova)
+    anova<- aov(Facebook$friend_count~Facebook$gender)
+    summary(anova)
 
 #P-value = 2e-16
 #Al ser el P-value mucho menor a 0.05 se rechaza la hipotesis nunla lo que quiere decir que el genero si
@@ -115,14 +115,14 @@ summary(anova)
 #H0: El genero no afecta (Genero = conteo de amistades)
 #H1: El genero si afecta (Genero =/= conteo de amistades)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=age, color=gender ))+ geom_boxplot()+theme_bw()
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=age, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Anova)
+    anova<- aov(Facebook$age~Facebook$gender)
+    summary(anova)
 
-#Metodo (Anova)
-anova<- aov(Facebook$age~Facebook$gender)
-summary(anova)
 #P-value = 2e-16
-
 #al ser e P-value mucho menor a 0.05 quiere decir que se rechaza la hipotesis nula que significa que 
 #dependiendo la edad si hay diferencia de edades
 
@@ -140,13 +140,13 @@ summary(anova)
 #H0 = Si tiene conrrelacion entre los datos 
 #H0 = No tiene correclacion entre los datos
 
-#Grafico(Plot)
-plot(Facebook$age,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
-modelolineal<-lm(Facebook$friend_count~Facebook$age)
-abline(modelolineal,col ="red")
-
-#Metodo(Correlacion)
-cor(Facebook$friend_count,Facebook$age)
+    #Grafico(Plot)
+    plot(Facebook$age,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
+    modelolineal<-lm(Facebook$friend_count~Facebook$age)
+    abline(modelolineal,col ="red")
+    
+    #Metodo(Correlacion)
+    cor(Facebook$friend_count,Facebook$age)
 
 #-0.02740737
 
@@ -168,15 +168,15 @@ cor(Facebook$friend_count,Facebook$age)
 #H0 = Si tiene conrrelacion entre los datos 
 #H0 = No tiene correclacion entre los datos
 
-#Grafico(Plot)
-plot(Facebook$friend_count,Facebook$likes, col="Blue", main = "Correlacion likes y Conteo de Amigos", ylab = "Likes", xlab = "Conteo de amigos")
-modelolineal<-lm(Facebook$likes~Facebook$friend_count)
-abline(modelolineal,col ="red")
-
-#Metodo(Correlacion)
-cor(Facebook$friend_count,Facebook$likes)
-
-#0.2980169
+    #Grafico(Plot)
+    plot(Facebook$friend_count,Facebook$likes, col="Blue", main = "Correlacion likes y Conteo de Amigos", ylab = "Likes", xlab = "Conteo de amigos")
+    modelolineal<-lm(Facebook$likes~Facebook$friend_count)
+    abline(modelolineal,col ="red")
+    
+    #Metodo(Correlacion)
+    cor(Facebook$friend_count,Facebook$likes)
+    
+    #0.2980169
 
 #La correlacion es minima asi que se puede decir que se hacepta la hipotesis nula pero de manera minima 
 #ya que si existe una correlacion que no es negativa pero lo tiene de manera minima 
@@ -194,15 +194,15 @@ cor(Facebook$friend_count,Facebook$likes)
 #H0 = Si tiene conrrelacion entre los datos 
 #H0 = No tiene correclacion entre los datos
 
-#Grafico(Plot)
-plot(Facebook$friendships_initiated,Facebook$likes, col="Blue", main = "Correlacion Likes y Amistades iniciadas", ylab = "Likes", xlab = "Amigos Iniciados")
-modelolineal<-lm(Facebook$likes~Facebook$friendships_initiated)
-abline(modelolineal,col ="red")
-
-#Metodo(Correlacion)
-cor(Facebook$friendships_initiated,Facebook$likes)
-
-#0.2855923
+    #Grafico(Plot)
+    plot(Facebook$friendships_initiated,Facebook$likes, col="Blue", main = "Correlacion Likes y Amistades iniciadas", ylab = "Likes", xlab = "Amigos Iniciados")
+    modelolineal<-lm(Facebook$likes~Facebook$friendships_initiated)
+    abline(modelolineal,col ="red")
+    
+    #Metodo(Correlacion)
+    cor(Facebook$friendships_initiated,Facebook$likes)
+    
+    #0.2855923
 
 #en ese caso el valor de correlacion es minima pero no negativa asi que se nota que los usuarios que no tienen
 #muchos amigos iniciados tienden a dar mas likes que los que tienen mas amigos iniciados en donde el promedio y la 
@@ -216,15 +216,15 @@ cor(Facebook$friendships_initiated,Facebook$likes)
 #H0 = Si tiene conrrelacion entre los datos 
 #H0 = No tiene correclacion entre los datos
 
-#Grafico(Plot)
-plot(Facebook$friendships_initiated,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
-modelolineal<-lm(Facebook$friend_count~Facebook$friendships_initiated)
-abline(modelolineal,col ="red")
-
-#Metodo(Correlacion)
-cor(Facebook$friend_count,Facebook$friendships_initiated)
-
-# 0.82585
+    #Grafico(Plot)
+    plot(Facebook$friendships_initiated,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
+    modelolineal<-lm(Facebook$friend_count~Facebook$friendships_initiated)
+    abline(modelolineal,col ="red")
+    
+    #Metodo(Correlacion)
+    cor(Facebook$friend_count,Facebook$friendships_initiated)
+    
+    # 0.82585
 
 #En este caso se nota que el valor de correlacion es mayor que quiere decir que si tiene correlacion en este caso
 #se nota que el total de amigos que se tiene porque concoce previamente tiene una gran correlacion con los nuevos amigos
@@ -240,12 +240,12 @@ cor(Facebook$friend_count,Facebook$friendships_initiated)
 #H0: El genero no afecta (Genero = Amigos Iniciados)
 #H1: El genero si afecta (Genero =/= Amigos Iniciados)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=friendships_initiated, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Chi2)
-anova<- aov(Facebook$friendships_initiated~Facebook$gender)
-summary(anova)
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=friendships_initiated, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Chi2)
+    anova<- aov(Facebook$friendships_initiated~Facebook$gender)
+    summary(anova)
 
 #Pvalue = 2e-16
 #En este casi se nota que el P-value es el valor minimo esto quiere decir que no se acepta la hipotesis nula
@@ -263,16 +263,16 @@ summary(anova)
 
 #H0 = Si tiene conrrelacion entre los datos 
 #H0 = No tiene correclacion entre los datos
-
-#Grafico(Plot)
-plot(Facebook$friend_count,Facebook$www_likes, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
-modelolineal<-lm(Facebook$www_likes~Facebook$friend_count)
-abline(modelolineal,col ="red")
-
-#Metodo(Correlacion)
-cor(Facebook$www_likes,Facebook$friend_count)
-
-# 0.2298027
+    
+    #Grafico(Plot)
+    plot(Facebook$friend_count,Facebook$www_likes, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
+    modelolineal<-lm(Facebook$www_likes~Facebook$friend_count)
+    abline(modelolineal,col ="red")
+    
+    #Metodo(Correlacion)
+    cor(Facebook$www_likes,Facebook$friend_count)
+    
+    # 0.2298027
 
 #En este caso se nota que no tienen mucha correlacion ya que es muy poco el valor correlativo que significa que no importa
 #de que plataforma (mobile o PC) se este siempre tendra diferenties amigos totales ya que no afectaria por cuestiones de acceisbilidad
@@ -283,12 +283,12 @@ cor(Facebook$www_likes,Facebook$friend_count)
 
 #El genero afecta en los likes recibidos 
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=likes_received, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Chi2)
-anova<- aov(Facebook$friendships_initiated~Facebook$gender)
-summary(anova)
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=likes_received, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Chi2)
+    anova<- aov(Facebook$friendships_initiated~Facebook$gender)
+    summary(anova)
 
 #P-Value = 2e-16
 #En este caso el P-values es menor a 0.05 entonce se rechaza la hipotesis nula que significa que el genero
@@ -311,12 +311,12 @@ summary(anova)
 #H0: El genero no afecta (Genero = Likes desde Mobile)
 #H1: El genero si afecta (Genero =/= Likes desde Mobile)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=mobile_likes, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Anova)
-anova<- aov(Facebook$mobile_likes~Facebook$gender)
-summary(anova)
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=mobile_likes, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Anova)
+    anova<- aov(Facebook$mobile_likes~Facebook$gender)
+    summary(anova)
 
 #P-value = 2e-16
 
@@ -334,12 +334,12 @@ summary(anova)
 #H0: El genero no afecta (Genero = likes desde la pagina web)
 #H1: El genero si afecta (Genero =/= likes desde la pagina web)
 
-#Grafico (ggplot)
-ggplot(data=Facebook, aes(x=gender,y=www_likes, color=gender ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Chi2)
-anova<- aov(Facebook$www_likes~Facebook$gender)
-summary(anova)
+    #Grafico (ggplot)
+    ggplot(data=Facebook, aes(x=gender,y=www_likes, color=gender ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Chi2)
+    anova<- aov(Facebook$www_likes~Facebook$gender)
+    summary(anova)
 
 #P-alue = 2e-16 
 
@@ -358,11 +358,11 @@ summary(anova)
 
 #¿Cual es la edad con mas promedio que usa la red social Facebook?
 
-#Shapiro
-summary(Facebook)
-hist(Facebook$age)
-# shapiro.test(Facebook$age) (el test por medio de shapiro no es posible realizarlo por tener un limite
-#de 3 a 5000 datos en donde nosotros excedemos la cantidad maxima)
+    #Shapiro
+    summary(Facebook)
+    hist(Facebook$age)
+    # shapiro.test(Facebook$age) (el test por medio de shapiro no es posible realizarlo por tener un limite
+    #de 3 a 5000 datos en donde nosotros excedemos la cantidad maxima)
 
 #Como se nota en la grafica la edad con mayor promedio de uso de facebook es entre 18 a 22 años
 #esto se explica que las nuevas generaciones ya crecen con la tecnologia al alcanze de la mano 
@@ -378,18 +378,18 @@ hist(Facebook$age)
 #h0 = Las variables son Independientes, El grado no depende de la region
 #h1 = Las variables no son Independientes , El grado depende de la region
 
-
-RG <- table(Banco$grade, Banco$region, dnn=c("Grado", "Region"))
-RG
-
-#Grafico (Mosaico)
-mosaicplot(RG, main=deparse("Relacion entre grado y region"), col=c("blue","purple", "red", "orange", "yellow"))
-
-#Metodo (Chi2)
-chisq.test(RG)
-
-#2.2e-16
-2.2e-16 < 0.05
+    
+    RG <- table(Banco$grade, Banco$region, dnn=c("Grado", "Region"))
+    RG
+    
+    #Grafico (Mosaico)
+    mosaicplot(RG, main=deparse("Relacion entre grado y region"), col=c("blue","purple", "red", "orange", "yellow"))
+    
+    #Metodo (Chi2)
+    chisq.test(RG)
+    
+    #2.2e-16
+    2.2e-16 < 0.05
 
 #El pvalue es menor a 0.05
 #El grado depende de la region
@@ -410,17 +410,17 @@ chisq.test(RG)
 #h0 = Las variables son independientes, la condicion de prestamo no depende de la categoria de ingreso
 #h1 = Las variables no son independientes, la condicion de prestamo depende de la categoria de ingreso
 
-Loip <- table(Banco$income_category, Banco$loan_condition, dnn=c("Categoria de Ingreso", "Condicion de prestamo"))
-Loip
-
-#Grafico (Mosaico)
-mosaicplot(Loip, main=deparse("Relacion categoria de ingresos y condicion de prestamos"), col=c("blue","dark green"))
-
-#Metodo (Chi2)
-chisq.test(Loip)
-
-#2.2e-16
-2.2e-16 < 0.05
+    Loip <- table(Banco$income_category, Banco$loan_condition, dnn=c("Categoria de Ingreso", "Condicion de prestamo"))
+    Loip
+    
+    #Grafico (Mosaico)
+    mosaicplot(Loip, main=deparse("Relacion categoria de ingresos y condicion de prestamos"), col=c("blue","dark green"))
+    
+    #Metodo (Chi2)
+    chisq.test(Loip)
+    
+    #2.2e-16
+    2.2e-16 < 0.05
 
 #El pvalue es menor a 0.05
 #la condicion de prestamo depende de la categoria de ingreso
@@ -441,19 +441,19 @@ chisq.test(Loip)
 
 #los datos si presentan normalidad
 #los datos no presentan normalidad
-summary(Banco)
-
-
-IR <- split(Banco$interest_rate, Banco$interest_payments)
-par(mfrow=c(1,2))
-
-#histogramas
-hist(IR$High)
-
-#histogramas
-hist(IR$Low)
-
-par(mfrow=c(1,1))
+    summary(Banco)
+    
+    
+    IR <- split(Banco$interest_rate, Banco$interest_payments)
+    par(mfrow=c(1,2))
+    
+    #histogramas
+    hist(IR$High)
+    
+    #histogramas
+    hist(IR$Low)
+    
+    par(mfrow=c(1,1))
 
 #los datos no presentan normalidad segun la grafica
 #se rechaza la hipotesis nula
@@ -464,18 +464,18 @@ par(mfrow=c(1,1))
 
 #los datos si presentan normalidad
 #los datos no presentan normalidad
-summary(Banco)
-
-IR <- split(Banco$loan_amount, Banco$term)
-par(mfrow=c(1,2))
-
-#histogramas
-hist(IR$` 36 months`)
-
-#histogramas
-hist(IR$` 60 months`)
-
-par(mfrow=c(1,1))
+    summary(Banco)
+    
+    IR <- split(Banco$loan_amount, Banco$term)
+    par(mfrow=c(1,2))
+    
+    #histogramas
+    hist(IR$` 36 months`)
+    
+    #histogramas
+    hist(IR$` 60 months`)
+    
+    par(mfrow=c(1,1))
 
 #los datos presentan normalidad segun la grafica
 #no se rechaza la hipotesis nula
@@ -487,17 +487,17 @@ par(mfrow=c(1,1))
 #h0=Las dos variable son independientes, el interes no tiene dependencia con los años que pasen
 #h1=las 2 variables no son independientes, el interes tiene dependencia con los años que pasen 
 
-#Grafico = Plot
-plot(Banco$year, Banco$interest_rate, col="orange", main = "Correlacion año e intereses", ylab = "Tasa de Interes", xlab = "Años")
-
-YL<-lm(Banco$interest_rate~Banco$year)
-
-
-abline(YL,col ="dark green")
-
-#Metodo = Correlacion
-cor(Banco$year,Banco$interest_rate)
--0.06363243<0.05
+    #Grafico = Plot
+    plot(Banco$year, Banco$interest_rate, col="orange", main = "Correlacion año e intereses", ylab = "Tasa de Interes", xlab = "Años")
+    
+    YL<-lm(Banco$interest_rate~Banco$year)
+    
+    
+    abline(YL,col ="dark green")
+    
+    #Metodo = Correlacion
+    cor(Banco$year,Banco$interest_rate)
+    -0.06363243<0.05
 
 # la correlacion nos da un resultado de -0.06363243
 # si, si hay dependencia en los interes mientras transcuren los años
@@ -516,16 +516,16 @@ cor(Banco$year,Banco$interest_rate)
 #h0=las variables son independientes, el monto del prestamo no depende  con los años
 #h1=las variables NO son independientes, el monto del prestamo depende  con los años 
 
-#Grafico = Plot
-plot(Banco$year, Banco$loan_amount, col="purple", main = "Correlacion años e monto del prestamo", ylab = "Años", xlab = "monto del prestamo")
-LY<-lm(Banco$loan_amount~Banco$year)
-
-
-abline(LY,col ="blue")
-
-#Metodo = Correlacion
-cor(Banco$year,Banco$loan_amount)
-0.1037222<0.05
+    #Grafico = Plot
+    plot(Banco$year, Banco$loan_amount, col="purple", main = "Correlacion años e monto del prestamo", ylab = "Años", xlab = "monto del prestamo")
+    LY<-lm(Banco$loan_amount~Banco$year)
+    
+    
+    abline(LY,col ="blue")
+    
+    #Metodo = Correlacion
+    cor(Banco$year,Banco$loan_amount)
+    0.1037222<0.05
 
 # la correlacion nos da un resultado de 0.1037222
 # significa que si hay una gran relacion entre monto del prestamo y años
@@ -542,17 +542,17 @@ cor(Banco$year,Banco$loan_amount)
 #Ho: no hay diferencias en el monto de prestamo por la propiedad de vivienda 
 #H1: si hay diferencias en el monto de prestamo por la propiedad de vivienda
 
-#Grafico (ggplot)
-ggplot(data=Banco, aes(x=home_ownership, y=loan_amount, color=home_ownership ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Chi2)
-anova<-aov(Banco$loan_amount~Banco$home_ownership)
-summary(anova)
-
-# Pr(>F)
-# 2e-16
-# (2e-16> 0.05)
-2e-16< 0.05
+    #Grafico (ggplot)
+    ggplot(data=Banco, aes(x=home_ownership, y=loan_amount, color=home_ownership ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Chi2)
+    anova<-aov(Banco$loan_amount~Banco$home_ownership)
+    summary(anova)
+    
+    # Pr(>F)
+    # 2e-16
+    # (2e-16> 0.05)
+    2e-16< 0.05
 
 #el pvalue es menor a 0.05 la grafica y el analisis indican que hay diferencias
 #Esto indica que no hay similitud de monto de prestamos por la propiedad de vivienda
@@ -573,17 +573,17 @@ summary(anova)
 #Ho: no hay diferencias en la taza de intereses por el grado
 #H1: si hay diferencias en la taza de intereses por el grado   
 
-#Grafico (ggplot)
-ggplot(data=Banco, aes(x=grade, y=interest_rate, color=grade ))+ geom_boxplot()+theme_bw()
-
-#Metodo (Chi2)
-anova<-aov(Banco$interest_rate~Banco$grade)
-summary(anova)
-
-# Pr(>F)
-# 2e-16
-# (2e-16> 0.05)
-2e-16<0.05
+    #Grafico (ggplot)
+    ggplot(data=Banco, aes(x=grade, y=interest_rate, color=grade ))+ geom_boxplot()+theme_bw()
+    
+    #Metodo (Chi2)
+    anova<-aov(Banco$interest_rate~Banco$grade)
+    summary(anova)
+    
+    # Pr(>F)
+    # 2e-16
+    # (2e-16> 0.05)
+    2e-16<0.05
 
 #el pvalue es menor a 0.05 la grafica y el analisis indican que si hay diferencias
 #Esto indica que no hay similitud en la taza de intereses por el grado
@@ -601,16 +601,17 @@ summary(anova)
 #  H0= No, no hay difenencia en el monto del prestamo por el tipo de aplicacion 
 #  H1= si, si hay diferencias en el monto del prestamo por el tipo de aplicacion
 
-#Grafica(Boxplot)
-boxplot(loan_amount~application_type, data = Banco, col = c("light green","orange"))
-
-#Metodo(Test de Hipotesis / T.test)
-t.test(Banco$loan_amount~Banco$application_type, alternative = "two.sided")
-
-# Pr(>F)
-# 2.2e-16
-# (2.2e-16 > 0.05)
-2.2e-16<0.05
+    #Grafica(Boxplot)
+    boxplot(loan_amount~application_type, data = Banco, col = c("light green","orange"))
+    
+    #Metodo(Test de Hipotesis / T.test)
+    t.test(Banco$loan_amount~Banco$application_type, alternative = "two.sided")
+    
+    # Pr(>F)
+    # 2.2e-16
+    # (2.2e-16 > 0.05)
+    2.2e-16<0.05
+    
 #El P-value es menor al 0.05
 #esto quiere que si hay diferencia en el monto por el prestamo
 #se rechaza la hipotesis nula
@@ -627,16 +628,17 @@ t.test(Banco$loan_amount~Banco$application_type, alternative = "two.sided")
 #  H0= No, no hay difenencia en la condicion de prestamo por el monto del tiempo 
 #  H1= si, si hay difenencia en la condicion de prestamo por el monto del tiempo
 
-#Grafica(Boxplot)
-boxplot(loan_amount~loan_condition, data = Banco, col = c("blue","dark green"))
+    #Grafica(Boxplot)
+    boxplot(loan_amount~loan_condition, data = Banco, col = c("blue","dark green"))
+  
+    #Metodo(Test de Hipotesis / T.test)
+    t.test(Banco$loan_amount~Banco$loan_condition, alternative = "two.sided")
+    
+    # Pr(>F)
+    # 0.0009836
+    # (0.0009836 > 0.05)
+    0.0009836<0.05
 
-#Metodo(Test de Hipotesis / T.test)
-t.test(Banco$loan_amount~Banco$loan_condition, alternative = "two.sided")
-
-# Pr(>F)
-# 0.0009836
-# (0.0009836 > 0.05)
-0.0009836<0.05
 #El P-value es menor al 0.05
 #esto quiere que si hay diferencia en el monto de prestamo con la condicion de prestamo
 #se rechaza la hipotesis nula
@@ -652,16 +654,16 @@ t.test(Banco$loan_amount~Banco$loan_condition, alternative = "two.sided")
 #  H0= No, no hay diferencia en pagos de interes por la tasa de interes 
 #  H1= si, si hay diferencia en pagos de interes por la tasa de interes
 
-#Grafica(Boxplot)
-boxplot(interest_rate~interest_payments, data = Banco, col = c("blue","dark green"))
-
-#Metodo(Test de Hipotesis / T.test)
-t.test(Banco$interest_rate~Banco$interest_payments, alternative = "two.sided")
-
-# Pr(>F)
-# 2.2e-16
-# (2.2e-16 > 0.05)
-2.2e-16<0.05
+    #Grafica(Boxplot)
+    boxplot(interest_rate~interest_payments, data = Banco, col = c("blue","dark green"))
+    
+    #Metodo(Test de Hipotesis / T.test)
+    t.test(Banco$interest_rate~Banco$interest_payments, alternative = "two.sided")
+    
+    # Pr(>F)
+    # 2.2e-16
+    # (2.2e-16 > 0.05)
+    2.2e-16<0.05
 
 
 #el pvalue ES menor a 0.05
@@ -674,49 +676,50 @@ t.test(Banco$interest_rate~Banco$interest_payments, alternative = "two.sided")
 #que hay mucho dinero circulando en ese banco
 
 # No.26
-tasas <-  read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
+#Grafica de tiempo de serie sobre la tasa de interes mediante los años que pasan
 
-Banco$Fecha = as.Date(tasas$issue_d,format="%d/%m/%Y")
-
-Banco$sem = week(Banco$Fecha)
-
-Banco$Anio = year(Banco$Fecha)
-
-interesemanal = Banco %>% group_by(Anio,sem) %>% summarise(media=mean(interest_rate))
-
-serieinteres = ts(interesemanal$media, start=c(2008,1),frequency = 50)
-
-#grafica de serie de tiempo de la tasa de interes
-plot(serieinteres)
-#----
-
-componente = decompose(serieinteres)
-
-tasas811 = window(serieinteres, start=2008,end=2010)
-
-primerP = forecast(tasas811,11)
-
-#Vemos la prediccion que tomara apartir de 2010
-plot(primerP)
-
-#---
-
-modd = auto.arima(tasas811)
-
-segundoP = forecast(modd,10)
-
-plot(segundoP)
-
-moddHT = HoltWinters(tasas811)
-
-tercerP = forecast(moddHT,10)
-
-plot(tercerP)
-
-accuracy(primerP)
-
-accuracy(segundoP)
-
-accuracy(tercerP)
-
-```
+    tasas <-  read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
+    
+    Banco$Fecha = as.Date(tasas$issue_d,format="%d/%m/%Y")
+    
+    Banco$sem = week(Banco$Fecha)
+    
+    Banco$Anio = year(Banco$Fecha)
+    
+    interesemanal = Banco %>% group_by(Anio,sem) %>% summarise(media=mean(interest_rate))
+    
+    serieinteres = ts(interesemanal$media, start=c(2008,1),frequency = 50)
+    
+    #grafica de serie de tiempo de la tasa de interes
+    plot(serieinteres)
+    #----
+    
+    componente = decompose(serieinteres)
+    
+    tasas811 = window(serieinteres, start=2008,end=2010)
+    
+    primerP = forecast(tasas811,11)
+    
+    #Vemos la prediccion que tomara apartir de 2010
+    plot(primerP)
+    
+    #---
+    
+    modd = auto.arima(tasas811)
+    
+    segundoP = forecast(modd,10)
+    
+    plot(segundoP)
+    
+    moddHT = HoltWinters(tasas811)
+    
+    tercerP = forecast(moddHT,10)
+    
+    plot(tercerP)
+    
+    accuracy(primerP)
+    
+    accuracy(segundoP)
+    
+    accuracy(tercerP)
+    
