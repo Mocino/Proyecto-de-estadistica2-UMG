@@ -10,6 +10,7 @@ library(tidyverse)
 
 Facebook <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/pseudo_facebook.csv")
 Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
+
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.1
 
@@ -17,6 +18,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #usuarios a ser tenderncia en Facebook.
 
 #H0: El genero no afecta (Genero = Tendencia)
+
 #H1: El genero si afecta (Genero =/= Tendencia)
 
     #Grafico (ggplot)
@@ -56,6 +58,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #En Facebok el genero es un factor que puede alterar los likes que da un usuario
 
 #H0: El genero no afecta (Genero = likes)
+
 #H1: El genero si afecta (Genero =/= likes)
 
 
@@ -88,6 +91,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #si no que a amistades que el conoce o viven cerca a el usuario que es gracias a facebook
 
 #H0: El genero no afecta (Genero = conteo de amistades)
+
 #H1: El genero si afecta (Genero =/= conteo de amistades)
 
     #Grafico (ggplot)
@@ -114,6 +118,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #El gener puede afectar en la edad de los usuarios 
 
 #H0: El genero no afecta (Genero = conteo de amistades)
+
 #H1: El genero si afecta (Genero =/= conteo de amistades)
 
     #Grafico (ggplot)
@@ -140,7 +145,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #social Facebook
 
 #H0 = Si tiene conrrelacion entre los datos 
-#H0 = No tiene correclacion entre los datos
+
+#H1 = No tiene correclacion entre los datos
 
     #Grafico(Plot)
     plot(Facebook$age,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
@@ -168,7 +174,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #el conteo de amigos total tiene alguna correlacion con los likes que da 
 
 #H0 = Si tiene conrrelacion entre los datos 
-#H0 = No tiene correclacion entre los datos
+
+#H1 = No tiene correclacion entre los datos
 
     #Grafico(Plot)
     plot(Facebook$friend_count,Facebook$likes, col="Blue", main = "Correlacion likes y Conteo de Amigos", ylab = "Likes", xlab = "Conteo de amigos")
@@ -194,7 +201,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #gracias a la red social y 
 
 #H0 = Si tiene conrrelacion entre los datos 
-#H0 = No tiene correclacion entre los datos
+
+#H1 = No tiene correclacion entre los datos
 
     #Grafico(Plot)
     plot(Facebook$friendships_initiated,Facebook$likes, col="Blue", main = "Correlacion Likes y Amistades iniciadas", ylab = "Likes", xlab = "Amigos Iniciados")
@@ -216,7 +224,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #Tiene alguna correlacion el conteo de amigos total con los amigos iniciados
 
 #H0 = Si tiene conrrelacion entre los datos 
-#H0 = No tiene correclacion entre los datos
+
+#H1 = No tiene correclacion entre los datos
 
     #Grafico(Plot)
     plot(Facebook$friendships_initiated,Facebook$friend_count, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
@@ -240,6 +249,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #El Genero es un factor que afecta con los amigos que inicia en la plataforma de facebook
 
 #H0: El genero no afecta (Genero = Amigos Iniciados)
+
 #H1: El genero si afecta (Genero =/= Amigos Iniciados)
 
     #Grafico (ggplot)
@@ -263,7 +273,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #Los likes desde internet tienen una correlacion con el conteo de amigos 
 
 #H0 = Si tiene conrrelacion entre los datos 
-#H0 = No tiene correclacion entre los datos
+
+#H1 = No tiene correclacion entre los datos
     
     #Grafico(Plot)
     plot(Facebook$friend_count,Facebook$www_likes, col="Blue", main = "Correlacion Genero y Conteo de Amigos", ylab = "Conteo de Amigos", xlab = "Edad")
@@ -308,6 +319,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #El genero afecta si tiene mas likes hechos desde la aplicacion mobile de facebook
 
 #H0: El genero no afecta (Genero = Likes desde Mobile)
+
 #H1: El genero si afecta (Genero =/= Likes desde Mobile)
 
     #Grafico (ggplot)
@@ -330,6 +342,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #El genero afecta si tiene mas likes hechos desde la pagina web de facebook
 
 #H0: El genero no afecta (Genero = likes desde la pagina web)
+
 #H1: El genero si afecta (Genero =/= likes desde la pagina web)
 
     #Grafico (ggplot)
@@ -372,6 +385,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿habra dependencia entre grado segun la region?
 
 #h0 = Las variables son Independientes, El grado no depende de la region
+
 #h1 = Las variables no son Independientes , El grado depende de la region
 
     
@@ -404,6 +418,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿Las variables son independientes entre condicion de pretamos y categoria de ingresos?
 
 #h0 = Las variables son independientes, la condicion de prestamo no depende de la categoria de ingreso
+
 #h1 = Las variables no son independientes, la condicion de prestamo depende de la categoria de ingreso
 
     Loip <- table(Banco$income_category, Banco$loan_condition, dnn=c("Categoria de Ingreso", "Condicion de prestamo"))
@@ -437,8 +452,10 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 # No.17
 #¿3. los datos de taza de interes y pagos de interés estan en normalidad?
 
-#los datos si presentan normalidad
-#los datos no presentan normalidad
+#H0: los datos si presentan normalidad
+
+#H1: los datos no presentan normalidad
+
     summary(Banco)
     
     
@@ -460,8 +477,10 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 # No.18
 #¿los datos de monto del préstamo por Plazo presentan normalidad?
 
-#los datos si presentan normalidad
-#los datos no presentan normalidad
+#H0 = los datos si presentan normalidad
+
+#H1 =los datos no presentan normalidad
+
     summary(Banco)
     
     IR <- split(Banco$loan_amount, Banco$term)
@@ -483,6 +502,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿tiene dependencia el interes con los años que pasen
 
 #h0=Las dos variable son independientes, el interes no tiene dependencia con los años que pasen
+
 #h1=las 2 variables no son independientes, el interes tiene dependencia con los años que pasen 
 
     #Grafico = Plot
@@ -513,6 +533,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿ hay independencia en el monto del prestamo con los años que pasen
 
 #h0=las variables son independientes, el monto del prestamo no depende  con los años
+
 #h1=las variables NO son independientes, el monto del prestamo depende  con los años 
 
     #Grafico = Plot
@@ -538,6 +559,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿hay similitud en el monto de prestamo segun la propiedad de vivienda?
 
 #Ho: no hay diferencias en el monto de prestamo por la propiedad de vivienda 
+
 #H1: si hay diferencias en el monto de prestamo por la propiedad de vivienda
 
     #Grafico (ggplot)
@@ -566,6 +588,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #¿hay igual en la taza de intereses no dependiendo el grado?
 
 #Ho: no hay diferencias en la taza de intereses por el grado
+
 #H1: si hay diferencias en la taza de intereses por el grado   
 
     #Grafico (ggplot)
@@ -593,8 +616,9 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.23
 #¿hay diferencia en el monto del prestamo por el tipo de aplicacion
-#  H0= No, no hay difenencia en el monto del prestamo por el tipo de aplicacion 
-#  H1= si, si hay diferencias en el monto del prestamo por el tipo de aplicacion
+#H0= No, no hay difenencia en el monto del prestamo por el tipo de aplicacion 
+
+#H1= si, si hay diferencias en el monto del prestamo por el tipo de aplicacion
 
     #Grafica(Boxplot)
     boxplot(loan_amount~application_type, data = Banco, col = c("light green","orange"))
@@ -619,8 +643,9 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.24
 #¿hay diferencia en la condicion de prestamo con el monto de prestamo 
-#  H0= No, no hay difenencia en la condicion de prestamo por el monto del tiempo 
-#  H1= si, si hay difenencia en la condicion de prestamo por el monto del tiempo
+#H0= No, no hay difenencia en la condicion de prestamo por el monto del tiempo 
+
+#H1= si, si hay difenencia en la condicion de prestamo por el monto del tiempo
 
     #Grafica(Boxplot)
     boxplot(loan_amount~loan_condition, data = Banco, col = c("blue","dark green"))
@@ -645,6 +670,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 # No.25
 #¿ay diferencia en pagos de interes por la tasa de interes 
 #  H0= No, no hay diferencia en pagos de interes por la tasa de interes 
+
 #  H1= si, si hay diferencia en pagos de interes por la tasa de interes
 
     #Grafica(Boxplot)
