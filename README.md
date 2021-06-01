@@ -293,6 +293,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.11
 #El genero afecta en los likes recibidos 
+#El genero no afecta (Genero = likes Recibido)
+#El genero si afecta (Genero =/= likes Recibido)
 
     #Grafico (ggplot)
     ggplot(data=Facebook, aes(x=gender,y=likes_received, color=gender ))+ geom_boxplot()+theme_bw()
