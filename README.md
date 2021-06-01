@@ -293,7 +293,9 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.11
 #El genero afecta en los likes recibidos 
+
 #El genero no afecta (Genero = likes Recibido)
+
 #El genero si afecta (Genero =/= likes Recibido)
 
     #Grafico (ggplot)
@@ -361,7 +363,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #En esta grafica se nota que el genero femenino tiende a dar mas likes desde la pagina web con constancia 
 #y un pico maximo mayor al genero masculino, esto puede explicarse a la privasidad o seguridad que se tiene desde 
-# la pagina web, los hombres tienden a querer todo con facilidad sin importar la seguiridad que se tenga ya que se a probado
+#la pagina web, los hombres tienden a querer todo con facilidad sin importar la seguiridad que se tenga ya que se a probado
 #que desde aplicaciones es mas accesible a ataques o robo de informacion a diferencia de las mujeres quienes aprecian
 #mas la privacidad por eso utilizan paginas web. Aunque en los ultimos estudios se nota que hay un crecimiento de uso
 #de telefonos en mujeres esto puede ocacionar un aumento en este tipo de dato que afectaria en un dataset mas actualizado
@@ -442,7 +444,7 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 #---analisis---#
 
 #Hay dependencia entre el ingreso y la condición de préstamo, pongamos como ejemplo el préstamo de un local:
-# *una persona con Ingresos bajos, tiene más necesidad de pedir un préstamo para poder poner un local
+#*una persona con Ingresos bajos, tiene más necesidad de pedir un préstamo para poder poner un local
 #*una persona con Ingresos Medios, puede tener o no tener la necesidad de pedir un préstamo
 #*una persona con Ingresos Altos, tiene poca necesidad de adquirir un préstamo
 #Mientras tanto en la condición de préstamo indica que hay mayor aceptación a un buen préstamo que un mal préstamo
@@ -519,8 +521,8 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
     cor(Banco$year,Banco$interest_rate)
     -0.06363243<0.05
 
-# la correlacion nos da un resultado de -0.06363243
-# si, si hay dependencia en los interes mientras transcuren los años
+#la correlacion nos da un resultado de -0.06363243
+#si, si hay dependencia en los interes mientras transcuren los años
 # Se rechaza la hipotesis nula
 
 #---analisis---#
@@ -670,10 +672,11 @@ Banco <- read.csv("E:/Escritorio/Marco/Estadisitca/Proyecto/loan_final313.csv")
 
 #--------------------------------------------------------------------------------------------------------------------------------#
 # No.25
-#¿ay diferencia en pagos de interes por la tasa de interes 
-#  H0= No, no hay diferencia en pagos de interes por la tasa de interes 
+#¿Hay diferencia en pagos de interes por la tasa de interes 
 
-#  H1= si, si hay diferencia en pagos de interes por la tasa de interes
+#H0= No, no hay diferencia en pagos de interes por la tasa de interes 
+
+#H1= si, si hay diferencia en pagos de interes por la tasa de interes
 
     #Grafica(Boxplot)
     boxplot(interest_rate~interest_payments, data = Banco, col = c("blue","dark green"))
