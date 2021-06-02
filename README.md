@@ -1,5 +1,8 @@
+
 # Proyecto-de-estadistica2-UMG
-Proyecto De estadística 2
+
+Integrantes del grupo:
+"Emerson Christian Andres Perez Chen 2490-19-13220 Y Marco Ederson Yol Raxcaco 2490-19-19523"
 
 require(stats)
 library (ggplot2)
