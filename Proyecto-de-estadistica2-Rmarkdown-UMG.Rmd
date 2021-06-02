@@ -1,6 +1,6 @@
 ---
 title: "Proyecto_Final"
-author: "Emerson Christian Andres Perez Chen 2490-19-13220 Y Marco Ederson Yol Raxcaco"
+author: "Emerson Christian Andres Perez Chen 2490-19-13220 Y Marco Ederson Yol Raxcaco 2490-19-19523"
 date: "31/5/2021"
 output:
   word_document: default
